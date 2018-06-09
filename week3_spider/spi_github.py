@@ -16,7 +16,7 @@ class start_spider_git_page1(scrapy.Spider):
     def parse(self,response):
         for i in response.css('li.public'):
             yield {'name': i.xpath('.//h3/a/text()').re('\w.*'),
-               'time': i.xpath('.//relative-time/@datetime').extract()
+               'update_time': i.xpath('.//relative-time/@datetime').extract()
                }
        # response.xpath('//h3/a/@href').extract()
 '''
