@@ -1,0 +1,7 @@
+<html>
+
+
+{% for i in d1 %}
+<a href="{{url_for('files',file_id=i.id)}}">{{i.title}}></a>
+{% endfor %}
+</html>
